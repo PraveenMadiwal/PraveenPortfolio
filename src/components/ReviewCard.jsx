@@ -20,7 +20,7 @@ const ReviewCard = ({
 }) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320]
-    flex flex-col lg:min-w-[420px]">
+    flex flex-col lg:min-w-[400px]">
         <div className="flex items-center gap-1 mb-3">
             {ratings.map(({icon, style}, key)=>(
                 <span 
@@ -36,11 +36,11 @@ const ReviewCard = ({
         </p>
 
         <div className="flex items-center gap-2 mt-auto">
-            <figure className="img-box rounded-lg">
+            <figure className="img-box rounded-lg max-w-[48px]">
                 <img src={imgSrc} 
                 alt={name} 
-                width={44}
-                height={44}
+                width={24}
+                height={24}
                 loading="lazy"
                 className="img-cover" />
             </figure>
