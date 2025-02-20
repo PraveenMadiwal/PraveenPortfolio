@@ -33,6 +33,25 @@ const socialLinks = [
       alt: 'Instagram'
     },
   ];
+  import emailjs from "emailjs-com";
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    emailjs.sendForm(
+      "service_mch6b12", 
+      "template_f6lvchp", 
+      e.target, 
+      "RY667EfAk0qWjclgJ"
+    )
+    .then((result) => {
+      alert("Message Sent Successfully!");
+    }, (error) => {
+      alert("Failed to send message. Please try again.");
+    });
+  
+    e.target.reset();
+  };
 
 const Contact = () => {
   return (
@@ -72,6 +91,7 @@ const Contact = () => {
             <form 
             action="https://getform.io/f/bwnqqgva"
             method="POST" 
+            onSubmit={sendEmail}
             className="xl:pl-10 2xl:pl-20">
 
                     <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">

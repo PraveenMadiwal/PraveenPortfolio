@@ -65,7 +65,7 @@ const Review = () => {
         end: 'buttom 80%',
         scrub:true,
       },
-      x:'-85'
+      x:'-50'
     })
   })
   return (
