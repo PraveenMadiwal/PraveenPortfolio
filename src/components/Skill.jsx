@@ -13,8 +13,18 @@ const skillItem = [
       desc: 'Programming Lang'
     },
     {
+      imgSrc: '/images/python.svg',
+      label: 'Python',
+      desc: 'Programming Lang'
+    },
+    {
       imgSrc: '/images/css3.svg',
       label: 'CSS',
+      desc: 'User Interface'
+    },
+    {
+      imgSrc: '/images/bootstrap.svg',
+      label: 'BootStrap',
       desc: 'User Interface'
     },
     {
@@ -35,6 +45,11 @@ const skillItem = [
     {
       imgSrc: '/images/mongodb.svg',
       label: 'MongoDB',
+      desc: 'Database'
+    },
+    {
+      imgSrc: '/images/mysql.svg',
+      label: 'My SQL',
       desc: 'Database'
     },
     {

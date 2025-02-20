@@ -9,34 +9,34 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
-      title: 'Full stack music app',
+      imgSrc: '/images/wetaac.png',
+      title: 'Web page',
       tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://musify-5al0.onrender.com/'
+      projectLink: 'https://wetaac.com/'
     },
     {
-      imgSrc: '/images/project-2.jpg',
-      title: 'Free stock photo app',
+      imgSrc: '/images/mushroom.png',
+      title: 'Ashok Farming webpage',
       tags: ['API', 'SPA'],
-      projectLink: 'https://pixstock-official.vercel.app/'
+      projectLink: 'https://ashokfarming.netlify.app/'
     },
-    {
-      imgSrc: '/images/project-3.jpg',
-      title: 'Recipe app',
-      tags: ['Development', 'API'],
-      projectLink: ''
-    },
+    // {
+    //   imgSrc: '/images/project-3.jpg',
+    //   title: 'Recipe app',
+    //   tags: ['Development', 'API'],
+    //   projectLink: ''
+    // },
     {
       imgSrc: '/images/project-4.jpg',
       title: 'Real state website',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee-org/wealthome'
+      projectLink: 'https://github.com/PraveenMadiwal/wealthome'
     },
     {
       imgSrc: '/images/project-5.jpg',
       title: 'eCommerce website',
       tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
+      projectLink: 'https://github.com/PraveenMadiwal/anon-ecommerce-website'
     },
     {
       imgSrc: '/images/project-6.jpg',
