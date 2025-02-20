@@ -38,6 +38,8 @@ const socialLinks = [
   const sendEmail = (e) => {
     e.preventDefault();
   
+    console.log("Form Data:", Object.fromEntries(new FormData(e.target)));
+  
     emailjs.sendForm(
       "service_mch6b12", 
       "template_f6lvchp", 
@@ -45,13 +47,17 @@ const socialLinks = [
       "RY667EfAk0qWjclgJ"
     )
     .then((result) => {
+      console.log("EmailJS Response:", result.text);
       alert("Message Sent Successfully!");
-    }, (error) => {
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
       alert("Failed to send message. Please try again.");
     });
   
     e.target.reset();
   };
+  
 
 const Contact = () => {
   return (
@@ -89,7 +95,7 @@ const Contact = () => {
             </div>
             
             <form 
-            action="https://getform.io/f/bwnqqgva"
+            action=""
             method="POST" 
             onSubmit={sendEmail}
             className="xl:pl-10 2xl:pl-20">
