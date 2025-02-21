@@ -1,22 +1,9 @@
-/**
- * @copyright 2025 praveenmadiwal
- * @license Apache-2.0
- */
-/*Node modules*/
-
 import { ReactLenis } from 'lenis/react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
-/**
- * Rigister gsap
- */
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-/**
- * component
- */
 
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -26,43 +13,42 @@ import Work from "./components/Work";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot"; // ✅ Import Chatbot
 
-const App = () =>{
+const App = () => {
+  useGSAP(() => {
+    const elements = gsap.utils.toArray('.reveal-up')
+    elements.forEach((element) => {
+      gsap.to(element, {
+        scrollTrigger: {
+          trigger: element,
+          start : '-200 bottom',
+          end : 'bottom 80%',
+          scrub: true
+        },
+        y:0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out'
+      })
+    });
+  });
 
-     useGSAP(()=>{
-          const elements = gsap.utils.toArray('.reveal-up')
+  return (
+    <ReactLenis root>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Skill />
+        <Work />
+        <Review />
+        <Contact />
+      </main>
+      <Footer />
+      <Chatbot /> 
+    </ReactLenis>
+  );
+};
 
-          elements.forEach((element) => {
-               gsap.to(element, {
-                    scrollTrigger: {
-                         trigger: element,
-                         start : '-200 bottom',
-                         end : 'bottom 80%',
-                         scrub: true
-                    },
-                    y:0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: 'power2.out'
-               })
-          });
-     });
-     return(
-     <ReactLenis root>
-          <Header/>
-          <main>
-              <Hero/>
-              <About />
-              <Skill />
-              <Work />
-              <Review />
-              <Contact />
-          </main>
-          <Footer />
-          
-     </ReactLenis>
-     )
-}
-
-
-export default App
+export default App;
