@@ -27,10 +27,10 @@ const works = [
     //   projectLink: ''
     // },
     {
-      imgSrc: '/images/project-4.jpg',
+      imgSrc: '/images/project-4.png',
       title: 'Real state website',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/PraveenMadiwal/wealthome'
+      projectLink: 'https://healthcampv2.web.app/login'
     },
     {
       imgSrc: '/images/project-5.jpg',
