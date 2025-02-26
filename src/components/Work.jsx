@@ -4,13 +4,14 @@
  */
 
 /*component*/
+import { ButtonPrimary } from "./Button";
 import ProjectCard from "./ProjectCard";
 
 
 const works = [
     {
       imgSrc: '/images/wetaac.png',
-      title: 'Web page',
+      title: 'WeTaac Technologies web page',
       tags: ['API', 'MVC', 'Development'],
       projectLink: 'https://wetaac.com/'
     },
@@ -28,21 +29,21 @@ const works = [
     // },
     {
       imgSrc: '/images/project-4.png',
-      title: 'Real state website',
-      tags: ['Web-design', 'Development'],
+      title: 'Hospital webpage',
+      tags: ['Web-design', 'Java Server Handling'],
       projectLink: 'https://healthcampv2.web.app/login'
     },
     {
       imgSrc: '/images/project-5.jpg',
       title: 'eCommerce website',
       tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/PraveenMadiwal/anon-ecommerce-website'
+      projectLink: 'https://github.com/PraveenMadiwal'
     },
     {
       imgSrc: '/images/project-6.jpg',
       title: 'vCard Personal portfolio',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
+      projectLink: ''
     },
   ];
 

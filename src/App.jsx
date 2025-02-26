@@ -13,7 +13,7 @@ import Work from "./components/Work";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Chatbot from "./components/Chatbot"; // ✅ Import Chatbot
+// import Chatbot from "./components/Chatbot"; // ✅ Import Chatbot
 
 const App = () => {
   useGSAP(() => {
@@ -46,7 +46,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-      <Chatbot /> 
+      {/* <Chatbot />  */}
     </ReactLenis>
   );
 };
