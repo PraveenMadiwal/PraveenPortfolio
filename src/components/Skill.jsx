@@ -32,6 +32,12 @@ const skillItem = [
     PageLink:'https://getbootstrap.com/'
   },
   {
+    imgSrc: '/images/chatgpt.png',
+    label: 'ChatGPT',
+    desc: 'Debugging, code refactoring',
+    PageLink:'https://chatgpt.com/'
+  },
+  {
     imgSrc: '/images/javascript.svg',
     label: 'JavaScript',
     desc: 'Interaction',
