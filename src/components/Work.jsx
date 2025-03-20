@@ -19,7 +19,7 @@ const works = [
       imgSrc: '/images/mushroom.png',
       title: 'Ashok Farming webpage',
       tags: ['API', 'SPA'],
-      projectLink: 'https://ashokfarming.netlify.app/'
+      projectLink: 'https://github.com/PraveenMadiwal/MagicMashroom'
     },
     // {
     //   imgSrc: '/images/project-3.jpg',
@@ -37,7 +37,7 @@ const works = [
       imgSrc: '/images/project-5.jpg',
       title: 'eCommerce website',
       tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/PraveenMadiwal'
+      projectLink: 'https://github.com/PraveenMadiwal/E-Commerce-Instantly-'
     },
     {
       imgSrc: '/images/project-6.jpg',

@@ -38,7 +38,7 @@ const sitemap = [
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/praveen-kumar-m-s-8280a6200'
+      href: 'https://www.linkedin.com/in/praveen-kumar-m-s-72a719355'
     },
     {
       label: 'Facebook',
