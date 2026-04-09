@@ -1,7 +1,6 @@
-// The Netlify serverless function that receives chatbot requests.
-// This file runs on the server, not in the browser.
+// const db = require('./config/db');
 
-// Hardcoded responses are used here so the chatbot works without a database.
+// Hardcoded bot responses (from database)
 const botResponses = {
     'hello': 'Hi there! How can I help you today?',
     'hi': 'Hello! What can I do for you?',
@@ -31,9 +30,7 @@ const botResponses = {
     'thank you for helping': 'You\'re welcome! Happy to assist.'
 };
 
-// Export the handler function that Netlify calls.
 export const handler = async (event, context) => {
-  // Only accept POST requests from the frontend.
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -41,14 +38,10 @@ export const handler = async (event, context) => {
     };
   }
 
-  // Parse the incoming JSON body from the frontend request.
   const { message } = JSON.parse(event.body);
 
-  // Look up the message in the predefined responses.
-  // If the user question is not found, return a fallback answer.
   const botResponse = botResponses[message.toLowerCase()] || "I'm not sure, but I'm learning!";
 
-  // Return a JSON response back to the frontend.
   return {
     statusCode: 200,
     body: JSON.stringify({ botResponse }),
