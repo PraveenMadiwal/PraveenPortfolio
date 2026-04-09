@@ -16,7 +16,7 @@ const Chatbot = () => {
         setInput('');
 
         try {
-            const apiUrl = import.meta.env.DEV ? 'http://localhost:5001/api/chatbot/message' : '/.netlify/functions/chatbot';
+            const apiUrl = import.meta.env.DEV ? '/.netlify/functions/chatbot' : '/.netlify/functions/chatbot';
             const response = await axios.post(apiUrl, { message: input });
             const botMessage = { sender: 'bot', text: response.data.botResponse };
             setMessages((prevMessages) => [...prevMessages, botMessage]);
