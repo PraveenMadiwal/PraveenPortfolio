@@ -31,8 +31,8 @@ INSERT INTO bot_responses (user_question, bot_answer) VALUES
 ('help', 'I can answer questions about the portfolio or general inquiries. What do you need?'),
 ('what do you do', 'I am here to assist with information about Praveen\'s portfolio, skills, and projects.'),
 ('tell me about praveen', 'Praveen is a skilled developer with expertise in web technologies, including React, Node.js, and more. Check out the portfolio for details!'),
-('what are your skills', 'Praveen has skills in JavaScript, React, Node.js, databases, and UI/UX design.'),
-('contact praveen', 'You can contact Praveen via the contact form on this website or through LinkedIn/email.'),
+
+('contact praveen', 'You can contact Praveen via the contact form on this website, email at praveenpavi633@gmail.com, or through LinkedIn.'),
 ('what projects have you done', 'Praveen has worked on various projects like portfolios, chatbots, and web applications. See the Projects section for more.'),
 ('how can i hire you', 'To hire Praveen, please reach out via the contact form or email provided on the site.'),
 ('what is your experience', 'Praveen has experience in full-stack development, building responsive websites and applications.'),
