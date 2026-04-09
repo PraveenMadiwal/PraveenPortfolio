@@ -30,7 +30,7 @@ const botResponses = {
     'thank you for helping': 'You\'re welcome! Happy to assist.'
 };
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
