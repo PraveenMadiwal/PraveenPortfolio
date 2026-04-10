@@ -16,7 +16,7 @@ const botResponses = {
     'what projects have you done': 'Praveen has worked on various projects like portfolios, chatbots, and web applications. See the Projects section for more.',
     'how can i hire you': 'To hire Praveen, please reach out via the contact form or email provided on the site.',
     'what is your experience': 'Praveen has experience in full-stack development, building responsive websites and applications.',
-   // 'do you have github': 'Yes, check out Praveen\'s GitHub for code samples and projects.',
+   'do you have github': 'Yes, check out Praveen\'s GitHub for code samples and projects. <a href="https://github.com/PraveenMadiwal" target="_blank">Github</a>',
     'what technologies do you use': 'Praveen uses technologies like React, Vite, Node.js, MySQL, Tailwind CSS, Java, and more.',
    'can you help with coding': 'I can provide general advice, but for specific coding help, feel free to ask!, required coding contact praveen for detailed assistance.',
     'what is your favorite project': 'Praveen enjoys working on interactive portfolios and chatbots like this one!',
@@ -42,10 +42,20 @@ const botResponses = {
               <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer">MySQL</a>',
     'packages': 'Yes, which packages do you want to know about? \
               <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'java': 'Yes, which packages do you want to know about? \
+              <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'Java packages': 'Yes, which packages do you want to know about? \
+              <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
     'you have packages': 'Yes, which packages do you want to know about? \
               <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
     'any inbuild packages':  'Yes, which packages do you want to know about? \
               <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'react': 'React.js is a JavaScript library for building user interfaces. \
+              But you can explore useful tools & utilities: \
+              <a href="https://react.dev" target="_blank">React Docs</a>, \
+              <a href="https://reactrouter.com" target="_blank">React Router</a>, \
+              <a href="https://redux.js.org" target="_blank">Redux</a>, \
+              <a href="https://tanstack.com/query" target="_blank">React Query</a>',
     'react tools': 'React does not have "packages" like Java. \
               But you can explore useful tools & utilities: \
               <a href="https://react.dev" target="_blank">React Docs</a>, \

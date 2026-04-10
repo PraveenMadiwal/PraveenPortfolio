@@ -1,11 +1,39 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const MyPackages = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Get query param (?type=java / react)
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  // Get query param
   const queryParams = new URLSearchParams(location.search);
   const type = queryParams.get("type");
+
+  // 👉 Mobile swipe gesture (Right swipe → go back/home)
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      touchStartX.current = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e) => {
+      touchEndX.current = e.changedTouches[0].screenX;
+
+      if (touchEndX.current - touchStartX.current > 80) {
+        navigate("/"); // go home
+      }
+    };
+
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [navigate]);
 
   // Data
   const javaPackages = [
@@ -26,7 +54,8 @@ const MyPackages = () => {
 
   return (
     <div className="min-h-screen bg-black text-white p-6">
-      
+
+
       {/* Heading */}
       <h1 className="text-3xl font-bold mb-6">
         {type === "react"
@@ -34,7 +63,7 @@ const MyPackages = () => {
           : "Java Inbuilt Packages"}
       </h1>
 
-      {/* JAVA SECTION */}
+      {/* JAVA */}
       {type === "java" && (
         <ul className="space-y-4">
           {javaPackages.map((pkg, index) => (
@@ -45,7 +74,7 @@ const MyPackages = () => {
         </ul>
       )}
 
-      {/* REACT SECTION */}
+      {/* REACT */}
       {type === "react" && (
         <ul className="space-y-4">
           {reactTools.map((tool, index) => (
@@ -63,25 +92,32 @@ const MyPackages = () => {
         </ul>
       )}
 
-      {/* DEFAULT (if no type passed) */}
+      {/* DEFAULT */}
       {!type && (
         <div>
           <p className="mb-4">Please select a category:</p>
 
           <div className="space-x-4">
-            <a
-              href="/myPackages?type=java"
+            <button
+              onClick={() => navigate("/myPackages?type=java")}
               className="bg-blue-600 px-4 py-2 rounded"
             >
               Java Packages
-            </a>
+            </button>
 
-            <a
-              href="/myPackages?type=react"
+            <button
+              onClick={() => navigate("/myPackages?type=react")}
               className="bg-green-600 px-4 py-2 rounded"
             >
               React Tools
-            </a>
+            </button>
+
+            <button
+              onClick={() => navigate("/")}
+              className="bg-red-600 px-4 py-2 rounded gap-4 m-4"
+            >
+               ← Back to Home
+            </button>
           </div>
         </div>
       )}
