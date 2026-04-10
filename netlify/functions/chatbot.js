@@ -32,6 +32,27 @@ const botResponses = {
     'what is his hobbies': 'Do you want personal or professional hobbies? Please type "personal" (or) "professional".',
     'professional': 'Praveen enjoys coding, learning new technologies, and building projects.',
     'personal': 'Praveen enjoys traveling, cooking, and playing video games in his free time.',
+    'undo': 'I can\'t undo, but I\'m here to help with any new questions you have!',
+    'reset': 'I can\'t reset, but feel free to ask anything else or start a new topic!',
+    'clear': 'I can\'t clear, but you can start a new conversation anytime!',
+    'library': 'Yes, which library do you want to know about? \
+              <a href="https://react.dev" target="_blank" rel="noopener noreferrer">React.js</a>, \
+              <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node.js</a>, \
+              <a href="https://www.java.com" target="_blank" rel="noopener noreferrer">Java</a>, \
+              <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer">MySQL</a>',
+    'packages': 'Yes, which packages do you want to know about? \
+              <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'you have packages': 'Yes, which packages do you want to know about? \
+              <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'any inbuild packages':  'Yes, which packages do you want to know about? \
+              <a href="/myPackages" target="_blank" rel="noopener noreferrer">Java</a>',
+    'react tools': 'React does not have "packages" like Java. \
+              But you can explore useful tools & utilities: \
+              <a href="https://react.dev" target="_blank">React Docs</a>, \
+              <a href="https://reactrouter.com" target="_blank">React Router</a>, \
+              <a href="https://redux.js.org" target="_blank">Redux</a>, \
+              <a href="https://tanstack.com/query" target="_blank">React Query</a>',
+
 };
 
 // exports.handler = async (event, context) => {

@@ -137,7 +137,8 @@ const Contact = () => {
                     </div>
                     <div className="mb-4">
                             <label 
-                            htmlFor="massage" 
+                            htmlFor="message"
+                            name="message" 
                             className="label reveal-up">
                                 Message
                             </label>

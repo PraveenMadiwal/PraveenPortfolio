@@ -12,11 +12,12 @@ const ProjectCard = ({
     imgSrc,
     title,
     tags,
+    descriptions,
     projectLink,
     classes
 }) => {
   return (
-      <div className={"relative p-4 rounded-2xl bg-zin-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors "+ classes}>
+      <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors "+ classes}>
             <figure className="img-box aspect-square rounded-lg
             mb-4">
                 <img src={imgSrc} 
@@ -42,6 +43,15 @@ const ProjectCard = ({
                             </span>
                         ))}
                     </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                        {descriptions.map((description, key)=>(
+                            <p 
+                            key={key}
+                            className="text-gray-300 text-sm">
+                                {description}
+                            </p>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="w-11 h-11 rounded-lg grid
@@ -54,11 +64,12 @@ const ProjectCard = ({
                     </span>
                 </div>
             </div>
-            <a href={projectLink} 
-            target="_blank"
-            className="absolute inset-0">
-
-            </a>
+                    <a 
+            href={projectLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="absolute inset-0"
+            />
       </div>
   )
 }
@@ -67,6 +78,7 @@ ProjectCard.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
+    descriptions: PropTypes.array,
     projectLink: PropTypes.string.isRequired,
     classes: PropTypes.string
 }

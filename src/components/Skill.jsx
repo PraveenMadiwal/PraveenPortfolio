@@ -1,4 +1,5 @@
 import SkillCard from "./SkillCard";
+import MyPackages from "../Pages/myPackages";
 
 const skillItem = [
   {
@@ -81,6 +82,21 @@ const skillItem = [
   },
 ];
 
+const myPackages = [
+  {
+    imgSrc: '/images/java.svg',
+    label: 'Java Packages',
+    desc: 'Inbuilt Packages',
+    PageLink: '/myPackages'
+  },
+  {
+    imgSrc: '/images/react.svg',
+    label: 'React Utils',
+    desc: 'Custom Hooks & Tools',
+    PageLink: '/myPackages'
+  },
+];
+
 const Skill = () => {
   return (
     <section className="section">
@@ -97,6 +113,28 @@ const Skill = () => {
             <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))]">
                 {
                     skillItem.map(({ imgSrc, label, desc, PageLink }, key) => (
+                        <SkillCard
+                            key={key} 
+                            imgSrc={imgSrc}
+                            label={label}
+                            desc={desc}
+                            PageLink={PageLink}
+                            classes="reveal-up"
+                        />
+                    ))
+                }
+            </div>
+
+            <h2 className="headline-2 reveal-up mt-12">
+            My Own Packages and Tools
+            </h2>
+            <p className="text-zinc-400 mt-3 mb:-8 max-w-[50ch]">
+            Explore my custom-built packages and tools, designed to enhance development efficiency and streamline workflows. These resources reflect my commitment to innovation and problem-solving in the software development landscape.
+            </p>
+
+            <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))]">
+                {
+                    myPackages.map(({ imgSrc, label, desc, PageLink }, key) => (
                         <SkillCard
                             key={key} 
                             imgSrc={imgSrc}

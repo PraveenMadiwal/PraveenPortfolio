@@ -4,6 +4,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// import MyPackages from "./pages/MyPackages";
 
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -14,6 +17,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Education from './components/Education';
 import Chatbot from "./components/Chatbot";
+
 
 const App = () => {
   useGSAP(() => {

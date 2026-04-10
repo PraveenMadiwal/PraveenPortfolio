@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 const aboutItems = [
   { label: "Projects Done", number: 5 },
-  { label: "Years of Experience", number: 2 },
+  { label: "Years of Experience", number: 1 },
+  { label: "YOE on Freelance", number: 1.5 },
 ];
 
 const About = () => {
