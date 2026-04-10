@@ -24,7 +24,7 @@ const About = () => {
             About <span className="text-sky-400">Me</span>
           </h2>
           <p className="text-gray-300 text-center md:text-left md:text-lg mb-6">
-            Welcome! I'm Praveen Kumar M S, a passionate software developer with 2 years of experience as a Full Stack Software Engineer at Wetaac Technologies Pvt Ltd & worked as a freelancer, 4 projects completed as of now.
+            Welcome! I'm Praveen Kumar M S, a passionate software developer with 1 years of experience as a Full Stack Software Engineer at Wetaac Technologies Pvt Ltd & worked as a freelancer of 1.5 years due some issues,on freelancer time period completed 4 projects as of now.
             I specialize in React.js for front-end development and Java for server-side applications. I also have hands-on expertise in manual testing, ensuring high-quality software.
           </p>
 
@@ -120,7 +120,21 @@ const About = () => {
                     </button>
                   </a>
                 </div>
+
+                <div className="text-center">
+                  <img src="/images/Be10x-Certificate.jpg" alt="Be10X Logo" className="w-32 sm:w-40 md:w-52 rounded-lg shadow-md mx-auto" />
+                  <a href="/images/Be10x-Certificate.jpg" download="Be10X-Certificate.jpg">
+                    <button className="mt-2 flex items-center gap-2 text-blue-500 hover:underline">
+                      <span className="material-symbols-rounded">download</span> Download Certificate
+                    </button>
+                  </a>
+                </div>
               </div>
+
+              <p className="mt-4 text-gray-300 text-sm md:text-base">
+                Be10X is an AI certificate focused on practical AI tool usage, prompt engineering, and online research. 
+                It teaches how to search for the best AI tools, use platforms like ChatGPT and Google Colab, and apply AI to real projects.
+              </p>
 
               <p className="mt-6 text-center md:text-left">
                 "I have a deep passion for development, driven by a continuous desire to learn, create, and solve complex problems. 

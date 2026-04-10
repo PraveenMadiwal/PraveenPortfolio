@@ -26,10 +26,13 @@ const Chatbot = () => {
 
         try {
             // The Netlify function endpoint that handles chatbot requests.
-            const apiUrl = '/.netlify/functions/chatbot';
+            // const apiUrl = '/.netlify/functions/chatbot';
+            const functionUrl = import.meta.env.DEV
+        ? 'http://localhost:8888/.netlify/functions/chatbot' // local Netlify dev server
+        : '/.netlify/functions/chatbot'; // deployed Netlify site
 
             // Send the user message to the serverless function.
-            const response = await axios.post(apiUrl, { message: input });
+            const response = await axios.post(functionUrl, { message: input });
 
             // Create a bot message from the response and show it in the UI.
             const botMessage = { sender: 'bot', text: response.data.botResponse };
@@ -94,9 +97,10 @@ const Chatbot = () => {
                     <div className="flex-1 overflow-y-auto overflow-x-hidden p-2 space-y-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800">
                         {messages.map((msg, index) => (
                             <div key={index} className={`p-1 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>
-                                <span className={`inline-block px-3 py-1 rounded-lg max-w-[75%] break-words ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white'}`}>
-                                    {msg.text}
-                                </span>
+                                <span 
+                                    className={`inline-block px-3 py-1 rounded-lg max-w-[75%] break-words ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white'}`}
+                                    dangerouslySetInnerHTML={{ __html: msg.text }} // Changed to render HTML for clickable links in bot responses
+                                />
                             </div>
                         ))}
                         {/* This empty element is used to scroll to the bottom automatically. */}
