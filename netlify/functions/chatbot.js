@@ -1,7 +1,5 @@
 // const db = require('./config/db');
 
-const { text } = require("express");
-
 // Hardcoded bot responses (from database)
 const botResponses = {
     'hello': 'Hi there! How can I help you today?',
@@ -36,20 +34,52 @@ const botResponses = {
     'personal': 'Praveen enjoys traveling, cooking, and playing video games in his free time.',
 };
 
-exports.handler = async (event, context) => {
+// exports.handler = async (event, context) => {
+//   if (event.httpMethod !== 'POST') {
+//     return {
+//       statusCode: 405,
+//       body: JSON.stringify({ error: 'Method not allowed' }),
+//     };
+//   }
+
+//   const { message } = JSON.parse(event.body);
+
+//   const botResponse = botResponses[message.toLowerCase()] || "I'm not sure, but I'm learning!";
+
+//   return {
+//     statusCode: 200,
+//     body: JSON.stringify({ botResponse }),
+//   };
+// };
+
+exports.handler = async (event) => {
+  // Allow only POST
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: 'Method not allowed' }),
     };
   }
 
-  const { message } = JSON.parse(event.body);
+  try {
+    const body = JSON.parse(event.body);
+    const message = body.message?.toLowerCase().trim();
 
-  const botResponse = botResponses[message.toLowerCase()] || "I'm not sure, but I'm learning!";
+    const botResponse =
+      botResponses[message] || "I'm not sure, but I'm learning!";
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ botResponse }),
-  };
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ botResponse }),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Server error' }),
+    };
+  }
 };
