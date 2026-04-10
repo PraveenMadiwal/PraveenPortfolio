@@ -26,13 +26,10 @@ const Chatbot = () => {
 
         try {
             // The Netlify function endpoint that handles chatbot requests.
-            // const apiUrl = '/.netlify/functions/chatbot';
-            const functionUrl = import.meta.env.DEV
-        ? 'http://localhost:8888/.netlify/functions/chatbot' // local Netlify dev server
-        : '/.netlify/functions/chatbot'; // deployed Netlify site
+            const apiUrl = '/.netlify/functions/chatbot';
 
             // Send the user message to the serverless function.
-            const response = await axios.post(functionUrl, { message: input });
+            const response = await axios.post(apiUrl, { message: input });
 
             // Create a bot message from the response and show it in the UI.
             const botMessage = { sender: 'bot', text: response.data.botResponse };
