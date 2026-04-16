@@ -70,6 +70,11 @@ const Navbar = ({ navOpen }) => {
       className: "nav-link",
     },
     {
+      label: "My Packages",
+      link: "#myPackages",
+      className: "nav-link",
+    },
+    {
       label: "Work",
       link: "#work",
       className: "nav-link",
