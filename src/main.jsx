@@ -18,6 +18,7 @@ import 'lenis/dist/lenis.css'
  */
 import App from './App.jsx'
 import MyPackages from "./Pages/myPackages.jsx";
+import ChatbotDetails from "./Pages/ChatbotDetails.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 createRoot(document.getElementById('root')).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/myPackages" element={<MyPackages />} />
+      <Route path="/chatbot-details" element={<ChatbotDetails />} />
     </Routes>
   </BrowserRouter>
 )

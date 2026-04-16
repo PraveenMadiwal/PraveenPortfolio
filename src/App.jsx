@@ -17,6 +17,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Education from './components/Education';
 import Chatbot from "./components/Chatbot";
+import ChatbotShowcase from "./components/ChatbotShowcase";
 
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
         <Hero />
         <About />
         <Skill />
+        <ChatbotShowcase /> 
         <Work />
         <Education />
         <Contact />
