@@ -15,56 +15,130 @@ const ChatbotDetails = () => {
 
     {
      title: "React Login UI",
-  code: `<div className="min-h-screen flex items-center justify-center bg-gray-100">
-  <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
-    
-    <h2 className="text-3xl font-bold text-center mb-6">
+  code: `<div className="bg-gradient-to-br from-gray-100 to-blue-100 p-6 rounded-2xl min-h-screen flex items-center justify-center">
+
+  <div className="bg-white w-full max-w-md mx-auto rounded-2xl shadow-2xl p-6 sm:p-8 hover:shadow-blue-200 transition duration-300">
+
+    {/* TOP ICON */}
+    <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+      🔐
+    </div>
+
+    {/* TITLE */}
+    <h2 className="text-3xl font-bold text-center text-black mb-2">
       Login Account
     </h2>
 
-    <p className="text-gray-500 text-center mb-6">
-      Enter your credentials to continue
+    <p className="text-gray-500 text-center mb-6 text-sm">
+      Welcome back! Please enter your credentials
     </p>
 
-    <form className="space-y-4">
+    {/* EMAIL */}
+    <div className="mb-4">
+      <label className="text-sm text-gray-600 mb-1 block">
+        Email Address
+      </label>
 
       <input
         type="email"
-        placeholder="Email Address"
-        className="w-full border p-3 rounded-lg"
+        placeholder="Enter email"
+        className="w-full border border-gray-300 p-3 rounded-lg text-black focus:ring-2 focus:ring-blue-500 outline-none"
       />
+    </div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        className="w-full border p-3 rounded-lg"
-      />
+    {/* PASSWORD */}
+    <div className="mb-3">
+      <label className="text-sm text-gray-600 mb-1 block">
+        Password
+      </label>
 
-      <div className="flex justify-between text-sm">
-        <label>
-          <input type="checkbox" /> Remember Me
-        </label>
+      <div className="relative">
+        <input
+          type="password"
+          placeholder="Enter password"
+          className="w-full border border-gray-300 p-3 rounded-lg text-black focus:ring-2 focus:ring-blue-500 outline-none"
+        />
 
-        <a href="/forgot-password">
-          Forgot Password?
-        </a>
+        <span className="absolute right-3 top-3 text-gray-400 cursor-pointer">
+          👁️
+        </span>
+      </div>
+    </div>
+
+    {/* REMEMBER + FORGOT */}
+    <div className="flex justify-between items-center text-sm text-black mb-5">
+
+      <label className="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" />
+        Remember Me
+      </label>
+
+      <span className="text-blue-600 cursor-pointer hover:underline">
+        Forgot Password?
+      </span>
+
+    </div>
+
+    {/* LOGIN BUTTON */}
+    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-semibold transition mb-3">
+      Login
+    </button>
+
+    {/* GOOGLE BUTTON */}
+    <button className="w-full border border-gray-300 hover:bg-gray-100 p-3 rounded-lg text-black font-medium transition mb-4">
+      Continue with Google
+    </button>
+
+    {/* DIVIDER */}
+    <div className="flex items-center gap-3 mb-4">
+      <hr className="flex-1 border-gray-300" />
+      <span className="text-sm text-gray-400">OR</span>
+      <hr className="flex-1 border-gray-300" />
+    </div>
+
+    {/* SOCIAL LOGIN */}
+    <div className="grid grid-cols-2 gap-3 mb-5">
+
+      <button className="border p-2 rounded-lg hover:bg-gray-100">
+        📘 Facebook
+      </button>
+
+      <button className="border p-2 rounded-lg hover:bg-gray-100">
+        🍎 Apple
+      </button>
+
+    </div>
+
+    {/* SIGNUP */}
+    <p className="text-center text-sm text-gray-500">
+      Don’t have an account?
+      <span className="text-blue-600 ml-1 cursor-pointer hover:underline">
+        Sign Up
+      </span>
+    </p>
+
+    {/* EXTRA FEATURES */}
+    <div className="mt-6 grid grid-cols-3 gap-2 text-center">
+
+      <div className="bg-blue-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-blue-600">24/7</p>
+        <p className="text-xs text-gray-500">Support</p>
       </div>
 
-      <button className="w-full bg-blue-600 text-white p-3 rounded-lg">
-        Login
-      </button>
+      <div className="bg-green-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-green-600">100%</p>
+        <p className="text-xs text-gray-500">Secure</p>
+      </div>
 
-      <button className="w-full border p-3 rounded-lg">
-        Login with Google
-      </button>
+      <div className="bg-purple-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-purple-600">Fast</p>
+        <p className="text-xs text-gray-500">Login</p>
+      </div>
 
-      <p className="text-center text-sm mt-4">
-        Don't have an account?
-        <a href="/signup"> Sign Up</a>
-      </p>
+    </div>
 
-    </form>
   </div>
+
 </div>`,
 
       // buttons route
@@ -72,115 +146,449 @@ const ChatbotDetails = () => {
       nodeLink: "/myPackages?type=node",
 
     preview: (
-      <div className="bg-gray-100 p-6 rounded-xl">
-        <div className="bg-white max-w-md mx-auto rounded-2xl shadow-xl p-6">
-          <h2 className="text-2xl font-bold text-center text-black mb-3">
-            Login Account
-          </h2>
+    <div className="bg-gradient-to-br from-gray-100 to-blue-100 p-6 rounded-2xl min-h-screen flex items-center justify-center">
 
-          <p className="text-gray-500 text-center mb-4">
-            Enter your credentials
-          </p>
+  <div className="bg-white w-full max-w-md mx-auto rounded-2xl shadow-2xl p-6 sm:p-8 hover:shadow-blue-200 transition duration-300">
 
-          <input
-            placeholder="Email Address"
-            className="w-full border p-3 rounded mb-3 text-black"
-          />
+    {/* TOP ICON */}
+    <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+      🔐
+    </div>
 
-          <input
-            placeholder="Password"
-            type="password"
-            className="w-full border p-3 rounded mb-3 text-black"
-          />
+    {/* TITLE */}
+    <h2 className="text-3xl font-bold text-center text-black mb-2">
+      Login Account
+    </h2>
 
-          <div className="flex justify-between text-sm text-black mb-4">
-            <label>
-              <input type="checkbox" /> Remember
-            </label>
+    <p className="text-gray-500 text-center mb-6 text-sm">
+      Welcome back! Please enter your credentials
+    </p>
 
-            <span className="text-blue-600 cursor-pointer">
-              Forgot?
-            </span>
-          </div>
+    {/* EMAIL */}
+    <div className="mb-4">
+      <label className="text-sm text-gray-600 mb-1 block">
+        Email Address
+      </label>
 
-          <button className="w-full bg-blue-600 text-white p-3 rounded mb-3">
-            Login
-          </button>
+      <input
+        type="email"
+        placeholder="Enter email"
+        className="w-full border border-gray-300 p-3 rounded-lg text-black focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+    </div>
 
-          <button className="w-full border p-3 rounded text-black">
-            Google Login
-          </button>
-        </div>
+    {/* PASSWORD */}
+    <div className="mb-3">
+      <label className="text-sm text-gray-600 mb-1 block">
+        Password
+      </label>
+
+      <div className="relative">
+        <input
+          type="password"
+          placeholder="Enter password"
+          className="w-full border border-gray-300 p-3 rounded-lg text-black focus:ring-2 focus:ring-blue-500 outline-none"
+        />
+
+        <span className="absolute right-3 top-3 text-gray-400 cursor-pointer">
+          👁️
+        </span>
       </div>
+    </div>
+
+    {/* REMEMBER + FORGOT */}
+    <div className="flex justify-between items-center text-sm text-black mb-5">
+
+      <label className="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" />
+        Remember Me
+      </label>
+
+      <span className="text-blue-600 cursor-pointer hover:underline">
+        Forgot Password?
+      </span>
+
+    </div>
+
+    {/* LOGIN BUTTON */}
+    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-semibold transition mb-3">
+      Login
+    </button>
+
+    {/* GOOGLE BUTTON */}
+    <button className="w-full border border-gray-300 hover:bg-gray-100 p-3 rounded-lg text-black font-medium transition mb-4">
+      Continue with Google
+    </button>
+
+    {/* DIVIDER */}
+    <div className="flex items-center gap-3 mb-4">
+      <hr className="flex-1 border-gray-300" />
+      <span className="text-sm text-gray-400">OR</span>
+      <hr className="flex-1 border-gray-300" />
+    </div>
+
+    {/* SOCIAL LOGIN */}
+    <div className="grid grid-cols-2 gap-3 mb-5">
+
+      <button className="border p-2 rounded-lg hover:bg-gray-100">
+        📘 Facebook
+      </button>
+
+      <button className="border p-2 rounded-lg hover:bg-gray-100">
+        🍎 Apple
+      </button>
+
+    </div>
+
+    {/* SIGNUP */}
+    <p className="text-center text-sm text-gray-500">
+      Don’t have an account?
+      <span className="text-blue-600 ml-1 cursor-pointer hover:underline">
+        Sign Up
+      </span>
+    </p>
+
+    {/* EXTRA FEATURES */}
+    <div className="mt-6 grid grid-cols-3 gap-2 text-center">
+
+      <div className="bg-blue-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-blue-600">24/7</p>
+        <p className="text-xs text-gray-500">Support</p>
+      </div>
+
+      <div className="bg-green-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-green-600">100%</p>
+        <p className="text-xs text-gray-500">Secure</p>
+      </div>
+
+      <div className="bg-purple-50 rounded-lg p-2">
+        <p className="text-lg font-bold text-purple-600">Fast</p>
+        <p className="text-xs text-gray-500">Login</p>
+      </div>
+    </div>
+  </div>
+</div>
     ),
     },
 
     {
       title: "Profile Card UI",
 
-      code: `<div className="card p-6 bg-white rounded-lg shadow-lg text-center">
-  <img src="user.png" />
-  <h2>Praveen Kumar</h2>
-  <p>Full Stack Developer</p>
-  <div className="socials flex gap-4 mt-4 justify-center md:justify-start">
-    <a href="#" className="text-blue-500 hover:text-blue-700">
+      code: `<div className="bg-white text-black rounded-2xl shadow-xl p-6 max-w-md mx-auto hover:shadow-2xl transition duration-300">
+
+  {/* PROFILE IMAGE */}
+  <div className="relative w-fit mx-auto">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+      className="w-24 h-24 rounded-full border-4 border-blue-500"
+    />
+
+    <button className="absolute bottom-0 right-0 bg-blue-600 text-white text-xs px-2 py-1 rounded-full hover:bg-blue-700">
+      Edit
+    </button>
+  </div>
+
+  {/* NAME */}
+  <div className="mt-4 text-center">
+    <div className="flex justify-center items-center gap-2">
+      <h2 className="text-2xl font-bold">
+        Praveen Kumar
+      </h2>
+
+      <button className="text-blue-600 hover:text-blue-800 text-sm">
+        ✏️
+      </button>
+    </div>
+
+    <div className="flex justify-center items-center gap-2 mt-1">
+      <p className="text-gray-500">
+        Full Stack Developer
+      </p>
+
+      <button className="text-blue-600 hover:text-blue-800 text-sm">
+        ✏️
+      </button>
+    </div>
+  </div>
+
+  {/* SOCIAL LINKS */}
+  <div className="flex justify-center gap-3 mt-4">
+    <button className="px-3 py-1 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200">
       LinkedIn
-    </a>
-    <a href="#" className="text-gray-500 hover:text-gray-700">
+    </button>
+
+    <button className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
       GitHub
-    </a>
-    <div className="flex gap-3 mt-4 justify-center md:justify-start">
-    <a href="/files/PraveenResume.pdf" download="Praveen_Kumar_MS-Cv.pdf">
-      <button className="bg-green-600 text-white px-4 py-2 rounded">
-        Download CV
+    </button>
+  </div>
+
+  {/* DETAILS SECTION */}
+  <div className="mt-6 space-y-4">
+
+    {/* ADDRESS */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Address
+        </h3>
+
+        <p className="font-medium">
+          Bangalore, Karnataka
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
       </button>
-    </a>
-    <a href="/contact">
-      <button className="bg-blue-600 text-white px-4 py-2 rounded">
-        Contact Me  
+    </div>
+
+    {/* PINCODE */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Pincode
+        </h3>
+
+        <p className="font-medium">
+          560001
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
       </button>
-    </a>
-  </div> 
+    </div>
+
+    {/* EMAIL */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Email
+        </h3>
+
+        <p className="font-medium break-all">
+          praveenkumar@gmail.com
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+    {/* PHONE */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Phone
+        </h3>
+
+        <p className="font-medium">
+          +91 9876543210
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+  </div>
+
+  {/* ACTION BUTTONS */}
+  <div className="grid grid-cols-2 gap-3 mt-6">
+
+    <button className="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+      Download CV
+    </button>
+
+    <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+      Contact
+    </button>
+
+  </div>
+
+  {/* EXTRA FEATURES */}
+  <div className="mt-5 grid grid-cols-3 gap-2 text-center">
+
+    <div className="bg-blue-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-blue-600">25+</p>
+      <p className="text-xs text-gray-500">Projects</p>
+    </div>
+
+    <div className="bg-green-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-green-600">4Y</p>
+      <p className="text-xs text-gray-500">Experience</p>
+    </div>
+
+    <div className="bg-purple-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-purple-600">100%</p>
+      <p className="text-xs text-gray-500">Success</p>
+    </div>
+
+  </div>
+
 </div>`,
 
       javaLink: "/myPackages?type=java",
       nodeLink: "/myPackages?type=node",
 
     preview: (
-      <div className="bg-white text-black rounded-xl shadow-xl p-6 text-center">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-          className="w-20 h-20 mx-auto rounded-full mb-4"
-        />
+      <div className="bg-white text-black rounded-2xl shadow-xl p-6 max-w-md mx-auto hover:shadow-2xl transition duration-300">
 
-        <h2 className="text-xl font-bold">
-          Praveen Kumar
-        </h2>
+  {/* PROFILE IMAGE */}
+  <div className="relative w-fit mx-auto">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+      className="w-24 h-24 rounded-full border-4 border-blue-500"
+    />
 
-        <p className="text-gray-500 mb-4">
-          Full Stack Developer
+    <button className="absolute bottom-0 right-0 bg-blue-600 text-white text-xs px-2 py-1 rounded-full hover:bg-blue-700">
+      Edit
+    </button>
+  </div>
+
+  {/* NAME */}
+  <div className="mt-4 text-center">
+    <div className="flex justify-center items-center gap-2">
+      <h2 className="text-2xl font-bold">
+        Praveen Kumar
+      </h2>
+
+      <button className="text-blue-600 hover:text-blue-800 text-sm">
+        ✏️
+      </button>
+    </div>
+
+    <div className="flex justify-center items-center gap-2 mt-1">
+      <p className="text-gray-500">
+        Full Stack Developer
+      </p>
+
+      <button className="text-blue-600 hover:text-blue-800 text-sm">
+        ✏️
+      </button>
+    </div>
+  </div>
+
+  {/* SOCIAL LINKS */}
+  <div className="flex justify-center gap-3 mt-4">
+    <button className="px-3 py-1 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200">
+      LinkedIn
+    </button>
+
+    <button className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
+      GitHub
+    </button>
+  </div>
+
+  {/* DETAILS SECTION */}
+  <div className="mt-6 space-y-4">
+
+    {/* ADDRESS */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Address
+        </h3>
+
+        <p className="font-medium">
+          Bangalore, Karnataka
         </p>
-
-        <div className="flex justify-center gap-3 mb-4">
-          <button className="text-blue-600">
-            LinkedIn
-          </button>
-
-          <button className="text-gray-700">
-            GitHub
-          </button>
-        </div>
-
-        <div className="flex gap-3 justify-center">
-          <button className="bg-green-600 text-white px-4 py-2 rounded">
-            Download CV
-          </button>
-
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">
-            Contact
-          </button>
-        </div>
       </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+    {/* PINCODE */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Pincode
+        </h3>
+
+        <p className="font-medium">
+          560001
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+    {/* EMAIL */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Email
+        </h3>
+
+        <p className="font-medium break-all">
+          praveenkumar@gmail.com
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+    {/* PHONE */}
+    <div className="bg-gray-50 rounded-xl p-3 flex justify-between items-center">
+      <div>
+        <h3 className="text-sm text-gray-500">
+          Phone
+        </h3>
+
+        <p className="font-medium">
+          +91 9876543210
+        </p>
+      </div>
+
+      <button className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 text-sm">
+        Edit
+      </button>
+    </div>
+
+  </div>
+
+  {/* ACTION BUTTONS */}
+  <div className="grid grid-cols-2 gap-3 mt-6">
+
+    <button className="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+      Download CV
+    </button>
+
+    <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+      Contact
+    </button>
+
+  </div>
+
+  {/* EXTRA FEATURES */}
+  <div className="mt-5 grid grid-cols-3 gap-2 text-center">
+
+    <div className="bg-blue-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-blue-600">5+</p>
+      <p className="text-xs text-gray-500">Projects</p>
+    </div>
+
+    <div className="bg-green-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-green-600">2.9Y</p>
+      <p className="text-xs text-gray-500">Experience</p>
+    </div>
+
+    <div className="bg-purple-50 rounded-lg p-2">
+      <p className="text-lg font-bold text-purple-600">100%</p>
+      <p className="text-xs text-gray-500">Success</p>
+    </div>
+
+  </div>
+
+</div>
     ),
   },
 
@@ -209,7 +617,7 @@ const ChatbotDetails = () => {
       nodeLink: "/myPackages?type=node",
 
        preview: (
-      <div className="bg-white text-center items-center justify-center rounded-xl shadow-xl p-3 sm:p-6 overflow-hidden ">
+      <div className="bg-white text-center items-center justify-center rounded-xl shadow-xl p-3 sm:p-6 hover:bg-gray-100 overflow-hidden ">
         <h3 className="text-xl font-bold mb-4">
           Total Users
         </h3>
@@ -242,26 +650,35 @@ const ChatbotDetails = () => {
     {
       title: "Navbar UI",
 
-      code: `<nav className="navbar bg-white p-4 rounded-lg shadow-lg flex justify-center gap-6">
-  <a href="/" className="text-blue-600 hover:text-blue-800">
-    Home
-  </a>
-  <a href="/projects" className="text-blue-600 hover:text-blue-800">
-    Projects
-  </a>
-  <a href="/about" className="text-blue-600 hover:text-blue-800">
-    About
-  </a>  
-  <a href="/contact" className="text-blue-600 hover:text-blue-800">
-    Contact
-  </a>
-  <a href="/blog" className="text-blue-600 hover:text-blue-800">
-    Blog
-  </a>
-  <button className="bg-green-600 text-white px-4 py-2 rounded">
-    Sign Up
-  </button>
-</nav>`,
+      code: `<div className="bg-white rounded-xl shadow-xl p-3 sm:p-6 overflow-hidden">
+        <nav className="flex flex-wrap gap-4 justify-center items-center text-black">
+
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
+            Home
+          </button>
+
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
+            Projects
+          </button>
+
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
+            About
+          </button>
+
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
+            Contact
+          </button>
+
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
+            Blog
+          </button>
+
+          <button className="bg-green-400 text-white px-4 py-2 hover:bg-green-700 rounded">
+            Sign Up
+          </button>
+
+        </nav>
+      </div>`,
 
       javaLink: "/myPackages?type=java",
       nodeLink: "/myPackages?type=node",
@@ -270,27 +687,27 @@ const ChatbotDetails = () => {
       <div className="bg-white rounded-xl shadow-xl p-3 sm:p-6 overflow-hidden">
         <nav className="flex flex-wrap gap-4 justify-center items-center text-black">
 
-          <button className="text-blue-600">
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
             Home
           </button>
 
-          <button className="text-blue-600">
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
             Projects
           </button>
 
-          <button className="text-blue-600">
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
             About
           </button>
 
-          <button className="text-blue-600">
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
             Contact
           </button>
 
-          <button className="text-blue-600">
+          <button className="text-black hover:text-white hover:bg-gray-600 px-2 py-1 rounded">
             Blog
           </button>
 
-          <button className="bg-green-600 text-white px-4 py-2 rounded">
+          <button className="bg-green-400 text-white px-4 py-2 hover:bg-green-700 rounded">
             Sign Up
           </button>
 
