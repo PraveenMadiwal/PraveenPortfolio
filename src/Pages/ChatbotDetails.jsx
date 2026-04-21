@@ -725,6 +725,7 @@ const ChatbotDetails = () => {
   const copyCode = (text) => {
    navigator.clipboard.writeText(text);
 console.log("Copied Successfully");
+alert("Code copied to clipboard!")
   };
 
 
