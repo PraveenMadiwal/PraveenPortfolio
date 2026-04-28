@@ -37,6 +37,13 @@ const works = [
       projectLink: 'https://healthcampv2.web.app/login'
     },
     {
+      imgSrc: '/images/project-4.jpg',
+      title: 'Catalog Pages UI',
+      tags: ['Web-design', 'Java Server Handling'],
+      descriptions: ["UI design for catalog pages, showcasing products with a clean and user-friendly interface."],
+      projectLink: 'https://catalog-app-ui.netlify.app/'
+    },
+    {
       imgSrc: '/images/project-5.jpg',
       title: 'eCommerce website (Instantly)',
       tags: ['eCommerce', 'Development', 'Grossary'],
