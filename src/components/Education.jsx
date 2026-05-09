@@ -9,14 +9,14 @@ const Education = () => {
         <div className="space-y-6">
           {/* College 1 */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900">Jain Institute of Technology</h3>
+            <h3 className="text-xl font-semibold text-gray-900"><a href="https://www.jitd.ac.in/" target="_blank" rel="noopener noreferrer">Jain Institute of Technology</a></h3>
             <p className="text-gray-600">Davanagere | Mechanical Engineering</p>
             <p className="text-gray-500">Passed out: 2022</p>
           </div>
 
           {/* College 2 */}
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900">St. Mary's Polytechnic College</h3>
+            <h3 className="text-xl font-semibold text-gray-900"><a href="https://www.stmaryspolytechnic.edu/" target="_blank" rel="noopener noreferrer">St. Mary's Polytechnic College</a></h3>
             <p className="text-gray-600">Chitradurga | Mechanical Engineering</p>
             <p className="text-gray-500">Passed out: 2019</p>
           </div>

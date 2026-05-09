@@ -52,10 +52,10 @@ const works = [
     },
     {
       imgSrc: '/images/project-6.jpg',
-      title: 'vCard Personal portfolio',
+      title: 'Skill-Bridge portfolio',
       tags: ['Web-design', 'Development'],
-      descriptions: ["A sleek vCard personal portfolio website built with React.js, showcasing professional achievements and skills in a visually appealing format."],
-      projectLink: 'http://github.com/PraveenMadiwal/vCard'
+      descriptions: ["Its a institute page that students can use to showcase their skills and projects. It features a clean and modern design, with sections for education, experience, and a portfolio of work."],
+      projectLink: 'https://github.com/PraveenMadiwal/skillbridge'
     },
   ];
 
